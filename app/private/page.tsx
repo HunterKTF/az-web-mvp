@@ -4,6 +4,7 @@ import { createClient } from '@/utils/supabase/server'
 
 import NavBar from "./components/nav-bar";
 import Titles from "./components/titles";
+import Reporting from "./components/reporting";
 
 export default async function PrivatePage() {
     const supabase = createClient()
@@ -21,11 +22,12 @@ export default async function PrivatePage() {
             <header className={"w-full h-fit px-5 py-8 bg-[#F6F6F6]"}>
                 <Titles />
             </header>
+
             <section className={"w-full h-full p-4 flex flex-col gap-4"}>
 
                 <div className={"w-full h-[45%] gap-4 flex flex-row"}>
-                    <div className={"w-[75%] h-full bg-[#F6F6F6] rounded-xl"}>
-                        Reporting
+                    <div className={"w-[75%] h-full bg-[#F6F6F6] rounded-xl p-5"}>
+                        <Reporting />
                     </div>
                     <div className={"w-full h-full bg-[#F6F6F6] rounded-xl"}>
                         Monthly Income
@@ -61,6 +63,7 @@ export default async function PrivatePage() {
                         </div>
                     </div>
                 </div>
+
             </section>
         </div>
     )
